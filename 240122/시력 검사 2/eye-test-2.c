@@ -6,7 +6,7 @@ int main() {
     scanf("%f",&average);
     if(average >=1.0) {
         printf("High");
-    }else if(average >0.5){
+    }else if(average >=0.5){
         printf("Middle");
     }else{
         printf("Low");
