@@ -12,7 +12,7 @@ int main() {
         printf("%d",a-b);
 
     }
-    if(a < b) {
+    if(a <= b) {
         printf("%d", b-a);
     }
 
