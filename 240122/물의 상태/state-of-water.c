@@ -6,7 +6,7 @@ int main() {
     scanf("%d", &ondo);
     if(ondo < 0){
         printf("ice");
-    }else if(ondo > 100) {
+    }else if(ondo >= 100) {
         printf("vapor");
     }else {
         printf("water");
