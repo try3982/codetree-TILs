@@ -1,21 +1,15 @@
 #include <stdio.h>
 
 int main() {
-    // 여기에 코드를 작성해주세요.
     int a, b, c;
     scanf("%d %d %d", &a, &b, &c);
-    if(a >= b) {
-        if (a <= c) {
-            printf("%d",a);
-        }else {
-            printf("%d",c);
-        }
-    }else{
-        if(b >= c){
-            printf("%d",c);
-        }else {
-            printf("%d",b);
-        }
+
+    if ((b >= a && b <= c) || (b >= c && b <= a)) {
+        printf("%d", b);
+    } else if ((a >= b && a <= c) || (a >= c && a <= b)) {
+        printf("%d", a);
+    } else {
+        printf("%d", c);
     }
 
     return 0;
