@@ -1,27 +1,33 @@
 import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
-       Scanner in = new Scanner(System.in);
-       int a = in.nextInt();
-       int b = in.nextInt();
-       int max =0;
-       int min=0;
-       int sum=0;
+        Scanner sc = new Scanner(System.in);
+        
+        // 변수 선언 및 입력
+        int a, b;
 
+        a = sc.nextInt();
+        b = sc.nextInt();
 
-       if(a > b ) {
-         max =a;
-         min = b;
-       }else {
-        max = b;
-        min =a;
-       }
-       
-       for(int i=min; i <=max; i++) {
-         if(min %5 ==0) {
-            sum++;
-         }
-       }
-       System.out.println(sum);
+        int sum = 0;
+
+        // Case 1. b가 더 큰 경우 
+        if(a <= b) {
+            for(int i = a; i <= b; i++) {
+                if(i % 5 == 0)
+                    sum += i;
+            }
+        }
+        // Case 2. a가 더 큰 경우
+        else {
+            for(int i = b; i <= a; i++) {
+                if(i % 5 == 0)
+                    sum += i;
+            }
+        }
+    
+        // 출력
+        System.out.println(sum);
     }
 }
