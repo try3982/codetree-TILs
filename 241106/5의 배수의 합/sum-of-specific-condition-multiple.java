@@ -4,10 +4,21 @@ public class Main {
        Scanner in = new Scanner(System.in);
        int a = in.nextInt();
        int b = in.nextInt();
+       int max =0;
+       int min=0;
        int sum=0;
+
+
+       if(a > b ) {
+         max =a;
+         min = b;
+       }else {
+        max = b;
+        min =a;
+       }
        
-       for(int i=a; i <=b; i++) {
-         if(a %5 ==0) {
+       for(int i=min; i <=max; i++) {
+         if(min %5 ==0) {
             sum++;
          }
        }
